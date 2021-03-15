@@ -1,0 +1,33 @@
+import express from 'express';
+import informacion from '../package.json';
+import cors from 'cors'
+import morgan from 'morgan'
+import 'core-js/stable';
+import "regenerator-runtime/runtime";
+
+
+const app = express();
+
+
+//Configuraciones 
+app.set('port',process.env.PORT || 5000)
+
+
+app.set('informacion',informacion)
+app.use(morgan('dev'))
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+app.use(cors())
+
+
+app.get('/',(req,res)=>{
+    res.json({
+        author: app.set('informacion').author,
+        description:app.set('informacion').description,
+        version: app.set('informacion').version
+    })
+})
+
+
+
+export default app;
