@@ -4,8 +4,8 @@
   "description": "Api de tornillos desarrollado para la empresa Zukytech",
   "main": "index.js",
   "scripts": {
-    "build":"babel src --out-dir build",
-    "dev":"nodemon src/index.js --exec babel-node",
+    "build": "babel src --out-dir build",
+    "dev": "nodemon src/index.js --exec babel-node",
     "start": "node build src/index.js"
   },
   "repository": {
@@ -27,7 +27,8 @@
     "helmet": "^4.4.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "uuidv4": "^6.2.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",

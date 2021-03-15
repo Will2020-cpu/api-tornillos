@@ -6,6 +6,9 @@ import 'core-js/stable';
 import "regenerator-runtime/runtime";
 
 
+//Importando rutas
+import categoriasRoutes from './routes/categorias.routes'
+
 const app = express();
 
 
@@ -27,6 +30,8 @@ app.get('/',(req,res)=>{
         version: app.set('informacion').version
     })
 })
+
+app.use('/api/categorias',categoriasRoutes)
 
 
 
