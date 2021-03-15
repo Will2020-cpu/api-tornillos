@@ -8,6 +8,8 @@ import "regenerator-runtime/runtime";
 
 //Importando rutas
 import categoriasRoutes from './routes/categorias.routes'
+import ProductosRouter from './routes/productos.routes'
+
 
 const app = express();
 
@@ -32,7 +34,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/api/categorias',categoriasRoutes)
-
+app.use('/api/productos',ProductosRouter)
 
 
 export default app;
