@@ -10,4 +10,6 @@ router.post('/add',CategoriaController.addCategorias)
 router.put('/edit/:id',CategoriaController.updateCategorias)
 router.delete('delete/:id',CategoriaController.deleteCategoria)
 
+
+
 export default router

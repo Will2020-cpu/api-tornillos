@@ -15,12 +15,15 @@ export const getProductosById  = async(req,res) =>{
 }
 
 export const addProductos = async(req,res) =>{
-    const { marca, largo, diametro, fk_categorias } = req.body;
+    const { nombre, marca,imagen, largo, diametro, precio, fk_categorias } = req.body;
     const newProducto  = {
         id: uuidv4(),
+        nombre,
         marca,
+        imagen,
         largo,
         diametro,
+        precio,
         fk_categorias
     }
 
@@ -30,14 +33,17 @@ export const addProductos = async(req,res) =>{
 
 export const updateProducto = async(req,res) =>{
     const { id } = req.params;
-    const { marca,largo,diametro,fk_categorias } = req.body;
+    const { nombre,marca,imagen, largo,diametro,precio,fk_categorias } = req.body;
     const updateProducto = {
+        nombre,
         marca,
+        imagen,
         largo,
         diametro,
+        precio,
         fk_categorias
     } 
-    await pool.query('UPDATE productos set ? WHERE id = ?',[id])
+    await pool.query('UPDATE productos set ? WHERE id = ?',[updateProducto,id])
     res.status(204).json()
 }
 
@@ -49,4 +55,9 @@ export const deleteProducto = async(req,res) =>{
 
 
 
+export const getProductosByCategoria = async(req,res) =>{
+    const { id } = req.params;
+    const datos = await pool.query('SELECT * FROM productos WHERE fk_categorias =  ?',[id])
+    res.json(datos)
+}
 
