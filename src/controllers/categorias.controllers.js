@@ -15,10 +15,11 @@ export const getCategoriaById = async(req,res) =>{
 }
 
 export const addCategorias = async(req,res)=>{
-    const { nombre,imagen } = req.body;
+    const { nombre,imagen,tipo } = req.body;
     const newCategoria = {
         nombre,
-        imagen
+        imagen,
+        tipo
     }
     await pool.query('INSERT INTO categorias set ?',[newCategoria])
     res.json({message:'Dato agregado correctamente'})
@@ -26,10 +27,11 @@ export const addCategorias = async(req,res)=>{
 
 export const updateCategorias = async(req,res) =>{
     const { id } = req.params;
-    const { nombre,imagen } = req.body;
+    const { nombre,imagen,tipo } = req.body;
     const updateCategoria = {
         nombre,
-        imagen
+        imagen,
+        tipo
     }
     await pool.query('UPDATE categorias set ? WHERE id = ?',[updateCategoria,id])
     res.status(204).json()

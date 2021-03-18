@@ -8,7 +8,9 @@ router.get('/',CategoriaController.getCategorias)
 router.get('/:id',CategoriaController.getCategoriaById)
 router.post('/add',CategoriaController.addCategorias)
 router.put('/edit/:id',CategoriaController.updateCategorias)
-router.delete('delete/:id',CategoriaController.deleteCategoria)
+router.delete('/delete/:id',CategoriaController.deleteCategoria)
+
+
 
 
 

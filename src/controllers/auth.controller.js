@@ -42,3 +42,20 @@ export const signup = async (req, res) => {
         res.json({ error:e })
     }
 }
+
+export const whoami = async (req,res) =>{
+	try{
+		const token = req.headers["x-access-token"]
+		if(!token) return res.status(404).json({error:"No hay token no puedes ingresar"})
+		const pase = jwt.verify(token,config.SECRET)
+		const datos = await pool.query('SELECT * FROM users WHERE email = ? AND password = ?',[pase.email,pase.password])
+		if(datos.length > 0){
+			return res.json({exito:"success"})
+		}else{
+			return res.json({error:"Tu Token no es valido"})
+		}
+
+	}catch(e){
+		return res.json({error:e})
+	}
+}

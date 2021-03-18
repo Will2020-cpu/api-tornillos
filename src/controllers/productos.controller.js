@@ -61,3 +61,8 @@ export const getProductosByCategoria = async(req,res) =>{
     res.json(datos)
 }
 
+export const getTenProducts = async(req,res) =>{
+    const datos = await pool.query('SELECT * FROM productos LIMIT 0, 10')
+    res.json(datos)
+}
+
