@@ -6,6 +6,7 @@ const router = Router()
 
 router.get('/',CategoriaController.getCategorias)
 router.get('/:id',CategoriaController.getCategoriaById)
+router.get('/get/:id',CategoriaController.getCategoriasByName)
 router.post('/add',CategoriaController.addCategorias)
 router.put('/edit/:id',CategoriaController.updateCategorias)
 router.delete('/delete/:id',CategoriaController.deleteCategoria)
