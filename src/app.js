@@ -12,7 +12,8 @@ import categoriasRoutes from './routes/categorias.routes'
 import ProductosRouter from './routes/productos.routes'
 import AuthRoutes from './routes/auth.routes'
 import TipoRoutes from './routes/tipos.routes'
-
+import notificaciones from './routes/notifications.routes'
+import clientes from './controllers/clientes.controller'
 
 
 const app = express();
@@ -42,5 +43,7 @@ app.use('/api/categorias',categoriasRoutes)
 app.use('/api/productos',ProductosRouter)
 app.use('/api/auth',AuthRoutes)
 app.use('/api/tipos',TipoRoutes)
+app.use('/services/notificaciones',notificaciones)
+app.use('/api/clientes',clientes)
 
 export default app;
