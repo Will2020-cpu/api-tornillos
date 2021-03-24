@@ -13,7 +13,7 @@ import ProductosRouter from './routes/productos.routes'
 import AuthRoutes from './routes/auth.routes'
 import TipoRoutes from './routes/tipos.routes'
 import notificaciones from './routes/notifications.routes'
-import clientes from './controllers/clientes.controller'
+import clientes from './routes/clientes.routes'
 
 
 const app = express();
