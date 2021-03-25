@@ -28,7 +28,7 @@ CREATE TABLE `categorias` (
   `imagen` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tipo` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
-INSERT INTO `categorias` VALUES (1,'Philips','https://image2.jdomni.in/banner/04112020/5D/2C/2C/1EA70BA509CD2A90BB9F7A11DE_1604467405081_500X.webp','Tornillos');
+INSERT INTO `categorias` VALUES (1,'Philips','https://image2.jdomni.in/banner/04112020/5D/2C/2C/1EA70BA509CD2A90BB9F7A11DE_1604467405081_500X.webp','Tornillos'),(2,'Joker','https://image2.jdomni.in/banner/04112020/5D/2C/2C/1EA70BA509CD2A90BB9F7A11DE_1604467405081_500X.webp','Tuercas');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES ('7f59ade7-d72f-40bf-a9f4-00e53b7c68ec','Caja de Tornillos','Willian','https://image1.jdomni.in/product/9C/CA/B5/58AD7C5AA5ED1539CE7D9E97A7_1506046595923.jpg','4cm','1/2',20000,1),('77d53691-fdf1-4eae-aa7d-979990814d94','Tornillo Fino','Willian','https://image1.jdomni.in/product/E8/F4/41/2DF84E2B9A6CEDDB1FC38DC628_1478704656237.jpg','4cm','1/6',99997,1),('165804b8-2b26-4e28-936a-17f14fa32b3e','Philips','Willian2','https://image1.jdomni.in/product/E2/56/8A/C36874758E2423DA297519F22E_1509609536247.jpg','4cm','1/2',1999,1);
+INSERT INTO `productos` VALUES ('7f59ade7-d72f-40bf-a9f4-00e53b7c68ec','Caja de Tornillos','Willian','https://image1.jdomni.in/product/9C/CA/B5/58AD7C5AA5ED1539CE7D9E97A7_1506046595923.jpg','4cm','1/2',20000,1),('77d53691-fdf1-4eae-aa7d-979990814d94','Tornillo Fino','Willian','https://image1.jdomni.in/product/E8/F4/41/2DF84E2B9A6CEDDB1FC38DC628_1478704656237.jpg','4cm','1/6',99997,1),('165804b8-2b26-4e28-936a-17f14fa32b3e','Philips','Willian2','https://image1.jdomni.in/product/E2/56/8A/C36874758E2423DA297519F22E_1509609536247.jpg','4cm','1/2',1999,1),('19a324cf-5a8a-4172-aa4a-78c9ac1f271f','Philips','Willian','https://image1.jdomni.in/product/F1/98/9C/422F232590362D74C6FFCB66C9_1509609721427.jpg','4cm','1/2',30000,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-25  6:54:05
+-- Dump completed on 2021-03-25 10:32:53
